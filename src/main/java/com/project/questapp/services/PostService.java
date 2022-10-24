@@ -4,6 +4,7 @@ import com.project.questapp.entities.Post;
 import com.project.questapp.entities.User;
 import com.project.questapp.repos.PostRepository;
 import com.project.questapp.requests.PostCreateRequest;
+import com.project.questapp.requests.UpdatePostRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,4 +48,19 @@ public class PostService {
     }
 
 
+    public Post updateOnePostById(Long postId , UpdatePostRequest updatePostRequest) {
+        Optional<Post> post= postRepository.findById(postId);
+        if(post.isPresent()){
+            Post toUpdate=post.get();
+            toUpdate.setText(updatePostRequest.getText());
+            toUpdate.setTitle(updatePostRequest.getTitle());
+            postRepository.save(toUpdate);
+            return toUpdate;
+        }
+        return null;
+    }
+
+    public void deleteOnePostById(Long postId) {
+         postRepository.deleteById(postId);
+    }
 }
