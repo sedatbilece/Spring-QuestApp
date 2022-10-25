@@ -34,7 +34,7 @@ public class PostService {
     }
 
     public Post createOnePost(PostCreateRequest newPost) {
-      User user=  userService.getOneUser(newPost.getUserId());
+      User user=  userService.getOneUserById(newPost.getUserId());
       if(user==null){
           return null;
       }

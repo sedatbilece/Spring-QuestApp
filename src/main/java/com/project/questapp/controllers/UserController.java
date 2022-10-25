@@ -1,12 +1,10 @@
 package com.project.questapp.controllers;
 
 import com.project.questapp.entities.User;
-import com.project.questapp.repos.UserRepository;
 import com.project.questapp.services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")//main mapping for class
@@ -37,7 +35,7 @@ public class UserController {
     @GetMapping("/{userId}")
     public User getOneUser(@PathVariable Long userId){
         //custom exception  //findById return optional
-        return userService.getOneUser(userId);
+        return userService.getOneUserById(userId);
     }
 
     @PutMapping("/{userId}")
