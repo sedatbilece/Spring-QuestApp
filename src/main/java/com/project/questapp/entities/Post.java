@@ -14,10 +14,10 @@ public class Post {
     @Id
     Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)//while post loading not load the user (Lazy)
+    @ManyToOne(fetch = FetchType.EAGER)//while post loading not load the user (Lazy)
     @JoinColumn(name = "post_id",nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+
     User user;
 
     String title;
