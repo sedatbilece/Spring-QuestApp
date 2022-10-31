@@ -1,4 +1,4 @@
-package com.project.questapp.repos;
+package com.project.questapp.responses.repos;
 
 import java.util.List;
 

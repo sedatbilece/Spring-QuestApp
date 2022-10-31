@@ -1,4 +1,4 @@
-package com.project.questapp.repos;
+package com.project.questapp.responses.repos;
 
 import com.project.questapp.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

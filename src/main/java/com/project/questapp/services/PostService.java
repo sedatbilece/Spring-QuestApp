@@ -2,7 +2,7 @@ package com.project.questapp.services;
 
 import com.project.questapp.entities.Post;
 import com.project.questapp.entities.User;
-import com.project.questapp.repos.PostRepository;
+import com.project.questapp.responses.repos.PostRepository;
 import com.project.questapp.requests.PostCreateRequest;
 import com.project.questapp.requests.UpdatePostRequest;
 import com.project.questapp.responses.PostResponse;

@@ -1,7 +1,7 @@
 package com.project.questapp.services;
 
 import com.project.questapp.entities.User;
-import com.project.questapp.repos.UserRepository;
+import com.project.questapp.responses.repos.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
