@@ -13,6 +13,7 @@ import java.util.Date;
 @Data
 public class Comment {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
 
